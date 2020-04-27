@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { TableContainer, Table, TableHead, TableRow, TableBody, TableCell } from '@material-ui/core'
 
 const Listings = (props) => {
@@ -12,13 +13,15 @@ const Listings = (props) => {
             <TableCell>Description</TableCell>
             <TableCell align="left">Address</TableCell>
             <TableCell align="right">Hours</TableCell>
+            {/* if logged in show: */}
+            {/* <TableCell align="right">Delete</TableCell> */}
           </TableRow>
         </TableHead>
         <TableBody>
           {props.listings.map((listing, i) => (
             <TableRow key={i}>
               <TableCell component="th" scope="row">
-                {listing.businessName}
+                <Link to={`/listing/${listing.id}`}>{listing.businessName}</Link>
               </TableCell>
               <TableCell align="left">
                 {listing.description}
@@ -29,6 +32,10 @@ const Listings = (props) => {
               <TableCell align="center">
                 {listing.operatingHours}
               </TableCell>
+              {/* if logged in show: */}
+              {/* <TableCell align="center">
+                trashcan icon
+              </TableCell> */}
             </TableRow>
           ))}
         </TableBody>

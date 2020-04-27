@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from './Navigation'
 import './App.css';
+import Navigation from './Navigation'
 import Router from './Router'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'

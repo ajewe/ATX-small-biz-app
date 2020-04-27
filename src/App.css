@@ -11,3 +11,8 @@
   margin: auto 20px;
   font-size: 14px;
 }
+
+a.nav-anchor {
+  color: white;
+  text-decoration: none;
+}

@@ -10,9 +10,13 @@ const Navigation = () => {
         <Typography>
           <ul className="nav-list">
             <li className="nav-list-item">
-              {/* <Link to="/">Listings</Link> */}
-              Listings
+              <Link to="/" className="nav-anchor">Listings</Link>
             </li>
+            
+            {/* <li className="nav-list-item">
+              Add
+            </li> */}
+
             <li className="nav-list-item">
               {/* make the below conditionally rendered  */}
               {/* <Link to="/login">Login</Link> */}
