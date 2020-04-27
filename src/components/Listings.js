@@ -1,8 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import cookie from 'cookie'
 import { TableContainer, Table, TableHead, TableRow, TableBody, TableCell } from '@material-ui/core'
 
 const Listings = (props) => {
+  const checkAuth = () => {
+    const cookies = cookie.parse(document.cookie)
+    return cookies["loggedIn"] ? true : false
+  }
+
   return (
     <div style={{display: 'flex', justifyContent: 'center', paddingTop: '40px'}}>
       <TableContainer style={{maxWidth: "80%"}}>
@@ -13,8 +19,7 @@ const Listings = (props) => {
             <TableCell>Description</TableCell>
             <TableCell align="left">Address</TableCell>
             <TableCell align="right">Hours</TableCell>
-            {/* if logged in show: */}
-            {/* <TableCell align="right">Delete</TableCell> */}
+            {checkAuth() === true && <TableCell align="right">Delete</TableCell>}
           </TableRow>
         </TableHead>
         <TableBody>
