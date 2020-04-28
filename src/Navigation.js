@@ -18,19 +18,19 @@ const Navigation = () => {
           <li className="nav-list-item">
             <Link to="/" className="nav-anchor">Listings</Link>
           </li>
-          
-          {/* <li className="nav-list-item">
-            Add
-          </li> */}
-
           {checkAuth() === true ?
-            <li className="nav-list-item"
-                onClick={()=> {
-                  document.cookie = "loggedIn="
-                  window.location.replace("/")
-                }}>
-              Logout
-            </li> 
+            <>
+              <li className="nav-list-item">
+                <Link to="/add" className="nav-anchor">Add</Link>
+              </li>
+              <li className="nav-list-item"
+                  onClick={()=> {
+                    document.cookie = "loggedIn="
+                    window.location.replace("/")
+                  }}>
+                Logout
+              </li>
+            </>
           :
             <li className="nav-list-item">
               <Link to="/login" className="nav-anchor">Login</Link>
