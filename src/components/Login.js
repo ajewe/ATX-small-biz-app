@@ -1,13 +1,14 @@
 import React from 'react'
 import { Container, TextField, Button } from '@material-ui/core'
+import { useHistory } from 'react-router-dom'
 
 const Login = () => {
+  const history = useHistory()
 
   const userLoggedIn = (e) => {
     e.preventDefault()
     document.cookie = "loggedIn=true;max-age=60*1000"
-    console.log(document.cookie)
-    window.location.replace("/")
+    history.push("/")
   };
 
   return (

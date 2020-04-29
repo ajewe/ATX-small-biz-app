@@ -1,7 +1,10 @@
 import React from 'react'
 import { Container, TextField, Button } from '@material-ui/core'
+import { useHistory } from 'react-router-dom'
 
 const AddListing = (props) => {
+  const history = useHistory()
+
   const [ newListing, setNewListing ] = React.useState({
     businessName: "",
     description: "",
@@ -16,22 +19,13 @@ const AddListing = (props) => {
     })
   }
 
-  const clearInputText = () => {
-    setNewListing({
-      businessName: "",
-      description: "",
-      address: "",
-      operatingHours: ""
-    })
-  }
-
   const handleSubmit = e => {
     e.preventDefault()
     const payload = { ...newListing }
     payload.id = props.listings.length + 1
     props.addListing(payload)
     alert('Listing added: ' + payload.businessName)
-    clearInputText()
+    history.push("/")
   }
 
   return (

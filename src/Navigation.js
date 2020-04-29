@@ -1,9 +1,10 @@
 import React from 'react'
 import { checkAuth } from './checkAuth'
 import { AppBar, Toolbar, Typography } from '@material-ui/core'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 const Navigation = () => {
+  const history = useHistory()
 
   return (
     <AppBar position="relative" style={{ background: '#3CB371' }}>
@@ -21,7 +22,7 @@ const Navigation = () => {
               <li className="nav-list-item"
                   onClick={()=> {
                     document.cookie = "loggedIn="
-                    window.location.replace("/")
+                    history.push("/")
                   }}>
                 Logout
               </li>
