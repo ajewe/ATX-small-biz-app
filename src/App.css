@@ -23,3 +23,7 @@ a.nav-anchor {
   flex-direction: column;
   margin-top: 60px;
 }
+
+.fa-trash-alt:hover {
+  cursor: pointer;
+}

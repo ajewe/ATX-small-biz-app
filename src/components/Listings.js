@@ -1,13 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import cookie from 'cookie'
+import { checkAuth } from '../checkAuth'
 import { TableContainer, Table, TableHead, TableRow, TableBody, TableCell } from '@material-ui/core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
 const Listings = (props) => {
-  const checkAuth = () => {
-    const cookies = cookie.parse(document.cookie)
-    return cookies["loggedIn"] ? true : false
-  }
 
   return (
     <div style={{display: 'flex', justifyContent: 'center', paddingTop: '40px'}}>
@@ -37,10 +35,15 @@ const Listings = (props) => {
               <TableCell align="center">
                 {listing.operatingHours}
               </TableCell>
-              {/* if logged in show: */}
-              {/* <TableCell align="center">
-                trashcan icon
-              </TableCell> */}
+              {checkAuth() === true && 
+                <TableCell align="center">
+                  <FontAwesomeIcon 
+                    icon={faTrashAlt}
+                    style={{color: "red"}}
+                    onClick={() => props.removeListing(i)}
+                  />
+                </TableCell>
+              }
             </TableRow>
           ))}
         </TableBody>

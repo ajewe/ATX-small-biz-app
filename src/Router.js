@@ -1,15 +1,10 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router'
-import cookie from 'cookie'
+import { checkAuth } from './checkAuth'
 import Listings from './containers/Listings'
 import EachListing from './containers/EachListing'
 import Login from './components/Login'
 import AddListing from './containers/AddListing'
-
-const checkAuth = () => {
-  const cookies = cookie.parse(document.cookie)
-  return cookies["loggedIn"] ? true : false
-}
 
 const ProtectedRoute = ({component: Component, ...rest}) => {
   return (

@@ -1,14 +1,9 @@
 import React from 'react'
-import cookie from 'cookie'
+import { checkAuth } from './checkAuth'
 import { AppBar, Toolbar, Typography } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
 const Navigation = () => {
-
-  const checkAuth = () => {
-    const cookies = cookie.parse(document.cookie)
-    return cookies["loggedIn"] ? true : false
-  }
 
   return (
     <AppBar position="relative" style={{ background: '#3CB371' }}>
