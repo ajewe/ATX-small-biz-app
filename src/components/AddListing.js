@@ -1,15 +1,20 @@
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux';
 import { Container, TextField, Button } from '@material-ui/core'
 import { useHistory } from 'react-router-dom'
+import { addListing } from '../redux/actions'
 
-const AddListing = (props) => {
+const AddListing = () => {
   const history = useHistory()
+  const allListings = useSelector(state => state.listings)
+  const dispatch = useDispatch()
 
   const [ newListing, setNewListing ] = React.useState({
     businessName: "",
     description: "",
     address: "",
-    operatingHours: ""
+    operatingHours: "",
+    display: true
   })
 
   const handleTextChange = e => {
@@ -22,8 +27,8 @@ const AddListing = (props) => {
   const handleSubmit = e => {
     e.preventDefault()
     const payload = { ...newListing }
-    payload.id = props.listings.length + 1
-    props.addListing(payload)
+    payload.id = allListings.length + 1
+    dispatch(addListing(payload))
     alert('Listing added: ' + payload.businessName)
     history.push("/")
   }

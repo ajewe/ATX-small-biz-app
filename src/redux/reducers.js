@@ -6,7 +6,8 @@ const listings = (state = [], action) => {
       return [ ...state, action.value ]
     case 'REMOVE_LISTING':
       const listings = [ ...state ]
-      listings.splice(action.value, 1)
+      const targetListing = listings.find(listing => listing.id === action.value)
+      targetListing.display = false
       return listings
     default:
       return state

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router'
 import { checkAuth } from './checkAuth'
-import Listings from './containers/Listings'
-import EachListing from './containers/EachListing'
+import Listings from './components/Listings'
+import EachListing from './components/EachListing'
 import Login from './components/Login'
-import AddListing from './containers/AddListing'
+import AddListing from './components/AddListing'
 
 const ProtectedRoute = ({component: Component, ...rest}) => {
   return (

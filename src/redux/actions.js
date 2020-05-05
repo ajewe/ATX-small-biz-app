@@ -5,9 +5,9 @@ export const addListing = (listing) => {
   }
 }
 
-export const removeListing = (index) => {
+export const removeListing = (elementId) => {
   return {
     type: 'REMOVE_LISTING',
-    value: index
+    value: elementId
   }
 }

@@ -1,11 +1,17 @@
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom'
 import { checkAuth } from '../checkAuth'
 import { TableContainer, Table, TableHead, TableRow, TableBody, TableCell } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { removeListing } from '../redux/actions'
 
-const Listings = (props) => {
+const Listings = () => {
+  const allListings = useSelector(state => state.listings)
+  const dispatch = useDispatch()
+
+  const listingsToShow = allListings.filter(listing => listing.display === true)
 
   return (
     <div style={{display: 'flex', justifyContent: 'center', paddingTop: '40px'}}>
@@ -21,7 +27,7 @@ const Listings = (props) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.listings.map((listing, i) => (
+          {listingsToShow.map((listing, i) => (
             <TableRow key={i}>
               <TableCell component="th" scope="row">
                 <Link to={`/listing/${listing.id}`}>{listing.businessName}</Link>
@@ -40,7 +46,7 @@ const Listings = (props) => {
                   <FontAwesomeIcon 
                     icon={faTrashAlt}
                     style={{color: "red"}}
-                    onClick={() => props.removeListing(i)}
+                    onClick={() => dispatch(removeListing(listing.id))}
                   />
                 </TableCell>
               }
