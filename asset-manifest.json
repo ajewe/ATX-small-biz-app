@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/ATX-small-biz-app/static/css/main.b1eb0e3a.chunk.css",
-    "main.js": "/ATX-small-biz-app/static/js/main.bd5e97e5.chunk.js",
-    "main.js.map": "/ATX-small-biz-app/static/js/main.bd5e97e5.chunk.js.map",
+    "main.js": "/ATX-small-biz-app/static/js/main.438b92d0.chunk.js",
+    "main.js.map": "/ATX-small-biz-app/static/js/main.438b92d0.chunk.js.map",
     "runtime-main.js": "/ATX-small-biz-app/static/js/runtime-main.5e3ed2b1.js",
     "runtime-main.js.map": "/ATX-small-biz-app/static/js/runtime-main.5e3ed2b1.js.map",
-    "static/js/2.d1ac5e02.chunk.js": "/ATX-small-biz-app/static/js/2.d1ac5e02.chunk.js",
-    "static/js/2.d1ac5e02.chunk.js.map": "/ATX-small-biz-app/static/js/2.d1ac5e02.chunk.js.map",
+    "static/js/2.2b8f7a76.chunk.js": "/ATX-small-biz-app/static/js/2.2b8f7a76.chunk.js",
+    "static/js/2.2b8f7a76.chunk.js.map": "/ATX-small-biz-app/static/js/2.2b8f7a76.chunk.js.map",
     "index.html": "/ATX-small-biz-app/index.html",
-    "precache-manifest.3831049a58ef85ea688034a46f5a50f8.js": "/ATX-small-biz-app/precache-manifest.3831049a58ef85ea688034a46f5a50f8.js",
+    "precache-manifest.f5f93f40c742641826fa012e943122b4.js": "/ATX-small-biz-app/precache-manifest.f5f93f40c742641826fa012e943122b4.js",
     "service-worker.js": "/ATX-small-biz-app/service-worker.js",
     "static/css/main.b1eb0e3a.chunk.css.map": "/ATX-small-biz-app/static/css/main.b1eb0e3a.chunk.css.map",
-    "static/js/2.d1ac5e02.chunk.js.LICENSE.txt": "/ATX-small-biz-app/static/js/2.d1ac5e02.chunk.js.LICENSE.txt"
+    "static/js/2.2b8f7a76.chunk.js.LICENSE.txt": "/ATX-small-biz-app/static/js/2.2b8f7a76.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5e3ed2b1.js",
-    "static/js/2.d1ac5e02.chunk.js",
+    "static/js/2.2b8f7a76.chunk.js",
     "static/css/main.b1eb0e3a.chunk.css",
-    "static/js/main.bd5e97e5.chunk.js"
+    "static/js/main.438b92d0.chunk.js"
   ]
 }
