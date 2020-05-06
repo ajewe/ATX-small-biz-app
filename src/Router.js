@@ -22,10 +22,10 @@ const ProtectedRoute = ({component: Component, ...rest}) => {
 const Router = () => {
   return (
     <Switch>
-      <Route exact path='/' component={Listings} />
-      <Route path="/listing/:id" component={EachListing} />
-      <Route path="/login" component={Login} />
-      <ProtectedRoute path="/add" component={AddListing} />
+      <Route exact path='/ATX-small-biz-app/' component={Listings} />
+      <Route path="/ATX-small-biz-app/listing/:id" component={EachListing} />
+      <Route path="/ATX-small-biz-app/login" component={Login} />
+      <ProtectedRoute path="/ATX-small-biz-app/add" component={AddListing} />
     </Switch>
   )
 }
